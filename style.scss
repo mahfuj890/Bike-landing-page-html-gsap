@@ -1,0 +1,129 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+// font-family: 'Bruno Ace SC', cursive;
+// font-family: 'Fira Sans Condensed', sans-serif;
+// font-family: 'Lobster', cursive;
+
+//Common
+a {
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+body {
+  position: relative;
+  font-size: 16px;
+  min-height: 100vh;
+  font-family: "Fira Sans Condensed", sans-serif;
+}
+.container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.d-flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 7px 12px;
+}
+
+// Top Banner
+.top_banner {
+  position: absolute;
+  height: 50vh;
+  width: 100vw;
+  background-color: #0d9ab7;
+}
+
+//Header Section
+.header_wrapper {
+  position: relative;
+  z-index: 10;
+  padding: 12px 0;
+  .account_area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    &:hover {
+      opacity: 0.8;
+      path {
+        stroke: #dd0de0;
+        stroke-width: 2;
+      }
+    }
+    span {
+      font-size: 18px;
+      color: white;
+    }
+    path {
+      transition: all 0.5s ease-in-out;
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -ms-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+    }
+  }
+  .logo {
+    a {
+      span {
+        font-size: 24px;
+        font-weight: 800;
+        color: white;
+      }
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .menu_area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      transition: all 0.5s ease-in-out;
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -ms-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+    }
+    .search_btn {
+      &:hover {
+        background-color: #dc5314bd;
+      }
+    }
+    .bar_btn {
+      &:hover {
+        background-color: #02bbff;
+      }
+    }
+  }
+}

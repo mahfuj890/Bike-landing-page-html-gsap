@@ -1,1 +1,116 @@
-/*# sourceMappingURL=style.css.map */
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+body {
+  position: relative;
+  font-size: 16px;
+  min-height: 100vh;
+  font-family: "Fira Sans Condensed", sans-serif;
+}
+
+.container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.d-flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 7px 12px;
+}
+
+.top_banner {
+  position: absolute;
+  height: 50vh;
+  width: 100vw;
+  background-color: #0d9ab7;
+}
+
+.header_wrapper {
+  position: relative;
+  z-index: 10;
+  padding: 12px 0;
+}
+.header_wrapper .account_area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.header_wrapper .account_area:hover {
+  opacity: 0.8;
+}
+.header_wrapper .account_area:hover path {
+  stroke: #dd0de0;
+  stroke-width: 2;
+}
+.header_wrapper .account_area span {
+  font-size: 18px;
+  color: white;
+}
+.header_wrapper .account_area path {
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+.header_wrapper .logo a span {
+  font-size: 24px;
+  font-weight: 800;
+  color: white;
+}
+.header_wrapper .logo a:hover {
+  opacity: 0.8;
+}
+.header_wrapper .menu_area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.header_wrapper .menu_area button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+.header_wrapper .menu_area .search_btn:hover {
+  background-color: rgba(220, 83, 20, 0.7411764706);
+}
+.header_wrapper .menu_area .bar_btn:hover {
+  background-color: #02bbff;
+}/*# sourceMappingURL=style.css.map */
