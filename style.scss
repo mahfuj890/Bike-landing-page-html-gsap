@@ -198,6 +198,7 @@ body {
       letter-spacing: 3px;
       text-transform: capitalize;
       margin-top: 10px;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
   }
 }
