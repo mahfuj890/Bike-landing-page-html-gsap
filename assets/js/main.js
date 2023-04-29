@@ -3,7 +3,100 @@
 //  Gsap Animation
 
 //Register Plugin
-gsap.registerPlugin(ScrollTrigger );
+gsap.registerPlugin(ScrollTrigger);
+
+//Cursor
+gsap.set("#bikeCursor", { xPercent: -50, yPercent: -50 });
+gsap.set(".cursor_area", { xPercent: -50, yPercent: -50 });
+
+window.addEventListener("mousemove", (e) => {
+  const { clientX, clientY } = e;
+
+  gsap.to("#bikeCursor", {
+    x: clientX,
+    y: clientY,
+    duration: 0.5,
+    delay: 0.2,
+    ease: "sing.in",
+  });
+
+  gsap.to(".cursor_area", {
+    x: clientX,
+    y: clientY,
+    duration: 0.5,
+    ease: "sing.in",
+    delay: 0.3,
+  });
+});
+
+//Show cursor effect for link,button
+const getLinkEl = document.querySelectorAll("a,button");
+const getScaleEl = document.querySelectorAll(".scale_lg");
+
+if (getLinkEl) {
+  getLinkEl.forEach((item) => {
+    item.addEventListener("mouseleave", (e) => {
+      gsap.to(".cursor_area", {
+        x: e.clientX,
+        y: e.clientY,
+        duration: 0.5,
+        ease: "sing.in",
+        delay: 0.3,
+        scale: 1,
+        mixBlendMode: "normal",
+      });
+      gsap.to("#bikeCursor", {
+        display: "block",
+      });
+    });
+    item.addEventListener("mouseenter", (e) => {
+      gsap.to(".cursor_area", {
+        x: e.clientX,
+        y: e.clientY,
+        duration: 0.5,
+        ease: "sing.in",
+        delay: 0.3,
+        scale: 1.2,
+        mixBlendMode: "difference",
+      });
+      gsap.to("#bikeCursor", {
+        display: "none",
+      });
+    });
+  });
+}
+if (getScaleEl) {
+  getScaleEl.forEach((item) => {
+    item.addEventListener("mouseleave", (e) => {
+      gsap.to(".cursor_area", {
+        x: e.clientX,
+        y: e.clientY,
+        duration: 0.5,
+        ease: "sing.in",
+        delay: 0.3,
+        scale: 1,
+        mixBlendMode: "normal",
+      });
+      gsap.to("#bikeCursor", {
+        display: "block",
+      });
+    });
+    item.addEventListener("mouseenter", (e) => {
+      gsap.to(".cursor_area", {
+        x: e.clientX,
+        y: e.clientY,
+        duration: 0.5,
+        ease: "sing.in",
+        delay: 0.3,
+        scale: 3,
+        mixBlendMode: "difference",
+      });
+      gsap.to("#bikeCursor", {
+        display: "none",
+      });
+    });
+  });
+}
 
 //Top Banner
 
@@ -106,9 +199,14 @@ heroTimeline
 
 //Footer Animation
 
-let footerTimeline = gsap.timeline( {stagger: 0.5, delay: 0.8, duration: 0.5,scrollTrigger:".footer_list"});
+let footerTimeline = gsap.timeline({
+  stagger: 0.5,
+  delay: 0.8,
+  duration: 0.5,
+  scrollTrigger: ".footer_list",
+});
 footerTimeline.fromTo(
   ".footer_list li",
   { x: -40, autoAlpha: 0 },
-  { x: 0, autoAlpha: 1,  }
+  { x: 0, autoAlpha: 1 }
 );
