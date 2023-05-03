@@ -34,11 +34,22 @@ button {
   border: none;
   background-color: transparent;
 }
-.scale_lg  {
+.scale_lg {
   position: relative;
   z-index: 550;
 }
-
+.logo {
+  a {
+    span {
+      font-size: 24px;
+      font-weight: 800;
+      color: white;
+    }
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
 body {
   position: relative;
   font-size: 16px;
@@ -193,18 +204,6 @@ body {
       -o-transition: all 0.5s ease-in-out;
     }
   }
-  .logo {
-    a {
-      span {
-        font-size: 24px;
-        font-weight: 800;
-        color: white;
-      }
-      &:hover {
-        opacity: 0.8;
-      }
-    }
-  }
 
   .menu_area {
     display: flex;
@@ -237,6 +236,64 @@ body {
     .bar_btn {
       &:hover {
         background-color: #02bbff;
+      }
+    }
+  }
+}
+
+//Menu Section
+.navbar_menu_wrapper {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  right: -200vw;
+  width: 100vw;
+  height: 56px;
+  z-index: 700;
+  background-color: #02cef7;
+  overflow: hidden;
+  .navbar_header {
+    padding: 12px 0;
+  }
+  .close_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    &:hover {
+      background-color: #3c7b92;
+    }
+  }
+  .menu_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    width: 100%;
+    height: calc(100vh - 60px);
+    a {
+      font-size: 32px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      &:hover {
+        opacity: 0.7;
       }
     }
   }

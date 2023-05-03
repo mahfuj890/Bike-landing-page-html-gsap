@@ -243,6 +243,38 @@ headerTimeline
   .from(".account_area,.search_btn,.bar_btn", { x: -20, autoAlpha: 0 })
   .to(".account_area,.search_btn,.bar_btn", { x: 0, autoAlpha: 1 });
 
+//Menu Section
+let menuOpenBtn = document.querySelector("#menuOpenBtn");
+let closeBtn = document.querySelector("#closeBtn");
+
+let menuTimeline = gsap.timeline({
+  defaults: { duration: 0.8, ease: "sing.in" },
+});
+
+if (menuOpenBtn) {
+  menuOpenBtn.addEventListener("click", () => {
+    if (menuTimeline.reversed()) {
+      menuTimeline.play();
+    } else {
+      menuTimeline
+        .to(".navbar_menu_wrapper", { right: 0 })
+        .to(".navbar_menu_wrapper", { height: "100vh" }, "-=0.1")
+        .fromTo(
+          ".menu_list li",
+          { autoAlpha: 0, y: 20 },
+          { autoAlpha: 1, y: 0, stagger: 0.2 },
+          "-=0.8"
+        );
+    }
+  });
+}
+
+if (closeBtn) {
+  closeBtn.addEventListener("click", () => {
+    menuTimeline.reverse();
+  });
+}
+
 //Hero Section
 
 //Split text
