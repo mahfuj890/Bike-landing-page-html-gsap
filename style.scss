@@ -34,6 +34,10 @@ button {
   border: none;
   background-color: transparent;
 }
+.scale_lg  {
+  position: relative;
+  z-index: 550;
+}
 
 body {
   position: relative;
@@ -64,7 +68,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 200000;
+  z-index: 500;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -89,7 +93,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 200000;
+  z-index: 501;
   width: 36px;
   height: 36px;
   display: flex;

@@ -6,11 +6,12 @@
 gsap.registerPlugin(ScrollTrigger);
 
 //Cursor
-gsap.set("#bikeCursor", { xPercent: -50, yPercent: -50 });
-gsap.set(".cursor_area", { xPercent: -50, yPercent: -50 });
+// gsap.set("#bikeCursor", { xPercent: -50, yPercent: -50 });
+// gsap.set(".cursor_area", { xPercent: -50, yPercent: -50 });
 
 // window.addEventListener("mousemove", (e) => {
 //   const { clientX, clientY } = e;
+// // console.log('mousemove global');
 
 //   gsap.to("#bikeCursor", {
 //     x: clientX,
@@ -33,9 +34,26 @@ gsap.set(".cursor_area", { xPercent: -50, yPercent: -50 });
 // const getLinkEl = document.querySelectorAll("a,button");
 // const getScaleEl = document.querySelectorAll(".scale_lg");
 
-// if (getLinkEl) {
-//   getLinkEl.forEach((item) => {
+// if (getScaleEl) {
+//   getScaleEl.forEach((item) => {
+//         item.addEventListener("mouseenter", (e) => {
+//           console.log('mouseenter');
+
+//       // gsap.to(".cursor_area", {
+//       //   x: e.clientX,
+//       //   y: e.clientY,
+//       //   duration: 0.5,
+//       //   ease: "sing.in",
+//       //   delay: 0.3,
+//       //   scale: 1.2,
+//       //   mixBlendMode: "difference",
+//       // });
+//       // gsap.to("#bikeCursor", {
+//       //   display: "none",
+//       // });
+//     });
 //     item.addEventListener("mouseleave", (e) => {
+//       console.log('mouseleave');
 //       gsap.to(".cursor_area", {
 //         x: e.clientX,
 //         y: e.clientY,
@@ -49,51 +67,72 @@ gsap.set(".cursor_area", { xPercent: -50, yPercent: -50 });
 //         display: "block",
 //       });
 //     });
-//     item.addEventListener("mouseenter", (e) => {
-//       gsap.to(".cursor_area", {
+//     item.addEventListener("mousemove", (e) => {
+//       console.log('mousemove');
+//        gsap.to(".cursor_area", {
 //         x: e.clientX,
 //         y: e.clientY,
 //         duration: 0.5,
 //         ease: "sing.in",
 //         delay: 0.3,
-//         scale: 1.2,
+//         scale: 1.5,
+//         zIndex:551,
 //         mixBlendMode: "difference",
 //       });
 //       gsap.to("#bikeCursor", {
 //         display: "none",
 //       });
 //     });
+
 //   });
 // }
 // if (getScaleEl) {
 //   getScaleEl.forEach((item) => {
 //     item.addEventListener("mouseleave", (e) => {
-//       gsap.to(".cursor_area", {
-//         x: e.clientX,
-//         y: e.clientY,
-//         duration: 0.5,
-//         ease: "sing.in",
-//         delay: 0.3,
-//         scale: 1,
-//         mixBlendMode: "normal",
-//       });
-//       gsap.to("#bikeCursor", {
-//         display: "block",
-//       });
+//       console.log('mouseleave');
+
+//       // gsap.to(".cursor_area", {
+//       //   x: e.clientX,
+//       //   y: e.clientY,
+//       //   duration: 0.5,
+//       //   ease: "sing.in",
+//       //   delay: 0.3,
+//       //   scale: 1,
+//       //   mixBlendMode: "normal",
+//       // });
+//       // gsap.to("#bikeCursor", {
+//       //   display: "block",
+//       // });
 //     });
 //     item.addEventListener("mouseenter", (e) => {
-//       gsap.to(".cursor_area", {
-//         x: e.clientX,
-//         y: e.clientY,
-//         duration: 0.5,
-//         ease: "sing.in",
-//         delay: 0.3,
-//         scale: 3,
-//         mixBlendMode: "difference",
-//       });
-//       gsap.to("#bikeCursor", {
-//         display: "none",
-//       });
+//       console.log('mouseenter');
+//       // gsap.to(".cursor_area", {
+//       //   x: e.clientX,
+//       //   y: e.clientY,
+//       //   duration: 0.5,
+//       //   ease: "sing.in",
+//       //   delay: 0.3,
+//       //   scale: 3,
+//       //   mixBlendMode: "difference",
+//       // });
+//       // gsap.to("#bikeCursor", {
+//       //   display: "none",
+//       // });
+//     });
+//     item.addEventListener("mousemove", (e) => {
+//       console.log('mousemove');
+//       // gsap.to(".cursor_area", {
+//       //   x: e.clientX,
+//       //   y: e.clientY,
+//       //   duration: 0.5,
+//       //   ease: "sing.in",
+//       //   delay: 0.3,
+//       //   scale: 1,
+//       //   mixBlendMode: "normal",
+//       // });
+//       // gsap.to("#bikeCursor", {
+//       //   display: "block",
+//       // });
 //     });
 //   });
 // }
